@@ -11,6 +11,9 @@ namespace Full_GRASP_And_SOLID
 {
     public class Recipe
     {
+        /*Como receta gurda objetos del tipo Step en un lista de Steps cumple con una
+        de las condiciones para tener la responsabilidad de crear una instancia de la clase Step*/
+        
         private IList<Step> steps = new List<Step>();
 
         public Product FinalProduct { get; set; }
