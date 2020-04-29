@@ -21,14 +21,10 @@ namespace Full_GRASP_And_SOLID
             PopulateCatalogs();
 
             Recipe recipe = new Recipe();
-            Product producto1 = new Product("Café",100);
-            Product producto2 = new Product("Leche",200);
-            Equipment equipamiento1 = new Equipment("Cafetera",120);
-            Equipment equipamiento2 = new Equipment("Hervidor",60);
-
+           
             recipe.FinalProduct = GetProduct("Café con leche");
-            recipe.AddStep(producto1, equipamiento1);
-            recipe.AddStep(producto2, equipamiento2);
+            recipe.AddStep(GetProduct("Café"),100,GetEquipment("Cafetera"),120);
+            recipe.AddStep(GetProduct("Leche"),200,GetEquipment("Hervidor"),60);
 
             IPrinter printer;
             printer = new ConsolePrinter();
